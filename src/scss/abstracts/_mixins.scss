@@ -1,0 +1,51 @@
+@mixin position($position, $top, $left, $bottom, $right, $width, $height) {
+    position: $position;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+    width: $width;
+    height: $height;
+}
+
+@mixin align($flex, $justify-content, $align-items, $height){
+    display: $flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    height: $height;
+}
+
+@mixin button($color1, $color2, $textColor, $height, $fontSize, $border__radius, $paddingVertical, $paddingHorizontal){
+    background: linear-gradient(to right, $color1, $color2);
+    color: $textColor;
+    text-decoration: none;
+    height: $height;
+    line-height: 4.5rem;
+    display: inline-block;
+    font-size: $fontSize;
+    font-weight: 400;
+    border-radius: $border__radius;
+    padding: $paddingVertical $paddingHorizontal;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@mixin animation($name, $duration, $timeFunction, $fadIn){
+    animation: $name $duration $timeFunction $fadIn;
+
+    @keyframes #{$name} {
+        0%{
+            opacity: 0;
+        }
+
+        50%{
+            opacity: 50%;
+        }
+
+        100%{
+            opacity: 100%;
+        }
+    }
+}
