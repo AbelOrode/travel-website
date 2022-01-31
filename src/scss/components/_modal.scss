@@ -3,7 +3,7 @@
 .modal{
     @include align(flex, center, center, null);
     @include position(fixed, 0, 0, 0, 0, 100%, 100%);
-
+    z-index: 6;
     background-color: rgba(0, 0, 0, .7);
 
     &__heading{

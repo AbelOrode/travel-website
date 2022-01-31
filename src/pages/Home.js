@@ -6,6 +6,8 @@ import Login from '../auth/Login'
 import { useContext } from 'react';
 import ModalContext from '../context/ModalContext';
 import {OPEN_MODAL} from '../context/types/ModelTypes';
+import { Helmet } from 'react-helmet-async';
+
 
 const Home = () => {
 
@@ -24,6 +26,11 @@ const Home = () => {
 
     return(
         <div>
+            <Helmet>
+                <title>Travel Friends</title>
+                <meta name = "description" content="travel to the world with travel friends"/>
+                <meta name = "keywords" content ="travel, travel tours, airline" />
+            </Helmet>
             <Header heading={state.heading} paragraph = {state.paragraph}>
                  <button onClick={() => dispatch({type: OPEN_MODAL, payload: registerModal})} className='btn-default'>Get Started</button>
             </Header>

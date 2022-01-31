@@ -5,7 +5,10 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 import ModelContext from './context/ModalContext';
 import ModalProvider from './context/providers/ModalProvider';
-
+import Nav from './components/Nav'
+import NavProvider from './context/providers/NavProvider';
+import Toggle from './components/Toggle';
+import {HelmetProvider} from 'react-helmet-async';
 //console.log(ModelContext);
 
 function App() {
@@ -16,11 +19,17 @@ function App() {
     
     <Router>
        <ModalProvider>
-       <Routes>
-            <Route path ='/' exact element = {<Home/>}/>
-            <Route path = '/about' exact element = {<About/>}/>  
-            <Route component = {NotFound} />     
-        </Routes>
+         <NavProvider>
+           <Toggle/>
+          <Nav/>
+          <HelmetProvider>
+          <Routes>
+              <Route path ='/' exact element = {<Home/>}/>
+              <Route path = '/about' exact element = {<About/>}/>  
+              <Route component = {NotFound} />     
+            </Routes>
+          </HelmetProvider>
+         </NavProvider>
        </ModalProvider>
     </Router>
   );
