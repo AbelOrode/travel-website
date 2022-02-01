@@ -1,0 +1,23 @@
+@use "index" as *;
+
+.btn-dark{
+    @include button($color__black, $color__black, $color__white, 4.5rem, 1.4rem, .4rem, 0, 2rem);
+}
+
+.btn-default{
+
+   @include button(
+    $main1,
+       $main2,
+       $color__white,
+       4.5rem,
+       1.4rem,
+       .2rem,
+       0,
+       2rem
+   )
+}
+
+.btn-white{
+    @include button(null, $color__white, $color__white, 3rem, 1.2rem, .3rem, 0, .2rem);
+}

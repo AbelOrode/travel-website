@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
-import ModelContext from './context/ModalContext';
+import Details from './pages/Details';
 import ModalProvider from './context/providers/ModalProvider';
 import Nav from './components/Nav'
 import NavProvider from './context/providers/NavProvider';
@@ -28,6 +28,7 @@ function App() {
                 <Routes>
                     <Route path ='/' exact element = {<Home/>}/>
                     <Route path = '/about' exact element = {<About/>}/>  
+                    <Route path ='/details/:id' exact element={<Details/>}/>
                     <Route component = {NotFound} />     
                   </Routes>
               </HelmetProvider>

@@ -42,7 +42,8 @@
         height: 35rem;
         border-radius: 1rem;
         overflow: hidden;
-        
+        position: relative;
+
         &__img{
 
             width: 100%;
@@ -54,5 +55,48 @@
                 object-fit: cover;
             }
         }
+        
+        &__layer{
+            
+            @include position(absolute, 0, 0, 0, 0, 100%, 100%);
+            @include align(flex, null, flex-end, null);
+            background: linear-gradient(to bottom, transparent 20%, $color__black);
+            padding: 2rem;;
+            color: $color__white;
+
+            &__content{
+
+                @include align(flex, null, center, null);
+
+                &__icon{
+                    color: $color__orange;
+                }
+
+                &__country{
+                    color: $color__white;
+                    font-variant: small-caps;
+                }
+            }
+        }
+
+        &__info{
+
+            @include position(absolute, 25%, 0, null, null, 0, 50%);
+            @include align(flex, center, center, null);
+            background: linear-gradient(to right, $main1, $main2);
+            transition: all .3s ease-in;
+
+            visibility: hidden;
+            &__text{
+                
+            }
+
+        }
+
+        &:hover &__info{
+            width: 100%;    
+            visibility: visible;
+        }
+
     }
 }

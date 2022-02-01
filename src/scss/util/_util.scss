@@ -7,26 +7,6 @@
     
 }
 
-.btn-dark{
-
-    @include button($color__black, $color__black, $color__white, 4.5rem, 1.4rem, .4rem, 0, 2rem);
-
-}
-
-.btn-default{
-
-   @include button(
-    $main1,
-       $main2,
-       $color__white,
-       4.5rem,
-       1.4rem,
-       .2rem,
-       0,
-       2rem
-   )
-}
-
 .group{
 
     margin-bottom: 1.3rem;
