@@ -4,6 +4,8 @@
 
 @use "scss/components/nav";
 
+@use "scss/components/destinations";
+
 @use "scss/components/Toggle";
 
 @use "scss/abstracts/variable";
@@ -11,3 +13,6 @@
 @use "scss/util/util";
 
 @use "scss/components/modal";
+
+@use "scss/layout/layout";
+

@@ -7,6 +7,7 @@ import { useContext } from 'react';
 import ModalContext from '../context/ModalContext';
 import {OPEN_MODAL} from '../context/types/ModelTypes';
 import { Helmet } from 'react-helmet-async';
+import Destinations from '../components/Destinations';
 
 
 const Home = () => {
@@ -41,6 +42,8 @@ const Home = () => {
             <Modal current = {loginModal}>
                 <Login currentModal = {registerModal}/>
             </Modal>
+
+            <Destinations/>
            
         </div>
     )

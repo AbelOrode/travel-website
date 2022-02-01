@@ -6,7 +6,7 @@ const Nav = () => {
 
 
     const {state, dispatch} = useContext(NavContext);
-    console.log('Nav State =', state)
+    
     
 return (
 

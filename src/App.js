@@ -9,6 +9,7 @@ import Nav from './components/Nav'
 import NavProvider from './context/providers/NavProvider';
 import Toggle from './components/Toggle';
 import {HelmetProvider} from 'react-helmet-async';
+import DestinationsProvider from './context/providers/DestinationsProvider';
 //console.log(ModelContext);
 
 function App() {
@@ -22,13 +23,15 @@ function App() {
          <NavProvider>
            <Toggle/>
           <Nav/>
-          <HelmetProvider>
-          <Routes>
-              <Route path ='/' exact element = {<Home/>}/>
-              <Route path = '/about' exact element = {<About/>}/>  
-              <Route component = {NotFound} />     
-            </Routes>
-          </HelmetProvider>
+            <DestinationsProvider>
+              <HelmetProvider>
+                <Routes>
+                    <Route path ='/' exact element = {<Home/>}/>
+                    <Route path = '/about' exact element = {<About/>}/>  
+                    <Route component = {NotFound} />     
+                  </Routes>
+              </HelmetProvider>
+            </DestinationsProvider>
          </NavProvider>
        </ModalProvider>
     </Router>
