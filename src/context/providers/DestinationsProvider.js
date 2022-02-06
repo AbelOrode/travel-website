@@ -2,10 +2,15 @@ import {useReducer} from "react";
 import DestinationsContext from '../DestinationsContext'
 import DestinationsReducer from "../reducers/DestinationsReducer";
 import {destinations} from "../../data/destinations"; 
+import Cities from "../../data/cities";
 
 const DestinationsProvider = (props) => {
     const [destinationsData, dispatch] = useReducer(DestinationsReducer, {
-        destinations
+        destinations,
+        details: {},
+        cities: Cities,
+        filteredCities: [],
+
     })
 
     return(

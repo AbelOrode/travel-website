@@ -8,6 +8,12 @@
 
 @use "scss/components/Toggle";
 
+@use "scss/components/Cities";
+
+@use "scss/components/services";
+
+@use "scss/components/reviews";
+
 @use "scss/abstracts/variable";
 
 @use "scss/abstracts/buttons";
@@ -17,4 +23,6 @@
 @use "scss/components/modal";
 
 @use "scss/layout/layout";
+
+@use "scss/components/destinationInfo";
 

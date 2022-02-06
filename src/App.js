@@ -10,28 +10,33 @@ import NavProvider from './context/providers/NavProvider';
 import Toggle from './components/Toggle';
 import {HelmetProvider} from 'react-helmet-async';
 import DestinationsProvider from './context/providers/DestinationsProvider';
-//console.log(ModelContext);
+import ServicesProvider from './context/providers/ServicesProvider';
+import ReviewsProvider from './context/providers/ReviewsProvider';
 
 function App() {
 
   const[state, dispatch] = useState({modalStatus: false});
   
   return (
-    
+      //The context APi makes a state globally accessible.
     <Router>
        <ModalProvider>
          <NavProvider>
            <Toggle/>
           <Nav/>
             <DestinationsProvider>
-              <HelmetProvider>
-                <Routes>
-                    <Route path ='/' exact element = {<Home/>}/>
-                    <Route path = '/about' exact element = {<About/>}/>  
-                    <Route path ='/details/:id' exact element={<Details/>}/>
-                    <Route component = {NotFound} />     
-                  </Routes>
-              </HelmetProvider>
+              <ServicesProvider>
+                <ReviewsProvider>
+                <HelmetProvider>
+                  <Routes>
+                      <Route path ='/' exact element = {<Home/>}/>
+                      <Route path = '/about' exact element = {<About/>}/>  
+                      <Route path ='/details/:id' exact element={<Details/>}/>
+                      <Route component = {NotFound} />     
+                    </Routes>
+                </HelmetProvider>
+              </ReviewsProvider>
+              </ServicesProvider>
             </DestinationsProvider>
          </NavProvider>
        </ModalProvider>

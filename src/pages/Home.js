@@ -1,14 +1,15 @@
 import Header from '../components/Header'
-import {useState} from 'react';
+import {useState, useEffect, useContext} from 'react';
 import Modal from '../components/Modal';
 import Register from '../auth/Register';
 import Login from '../auth/Login'
-import { useContext } from 'react';
 import ModalContext from '../context/ModalContext';
 import {OPEN_MODAL} from '../context/types/ModelTypes';
 import { Helmet } from 'react-helmet-async';
 import Destinations from '../components/Destinations';
-
+import Services from '../components/services/Services';
+import Reviews from '../components/reviews/Reviews'
+import ReviewsContext from '../context/ReviewsContext';
 
 const Home = () => {
 
@@ -23,7 +24,13 @@ const Home = () => {
     })
 
     const [registerModal] = useState('registerModal');
+
     const [loginModal] = useState('loginModal');
+
+
+    useEffect(() =>{
+        window.scrollTo(0, 0);
+    })
 
     return(
         <div>
@@ -44,6 +51,10 @@ const Home = () => {
             </Modal>
 
             <Destinations/>
+
+            <Services/>
+
+            <Reviews/>
            
         </div>
     )
