@@ -8,8 +8,6 @@ const Reviews = () => {
 
     const {reviewsData : {reviews}, } = useContext(ReviewsContext);
 
-    console.log(reviews);
-
     const[state] = useState({
 
         heading: `What our customers are saying?`,

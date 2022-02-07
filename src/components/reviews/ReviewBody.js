@@ -31,7 +31,7 @@ const ReviewBody = ({review}) => {
                             {rating(review.stars)}
                         </div>
                         <div className="reviews__body__contents__info__comment">
-                            {review.comment}
+                            {review.comment.substr(0, 100)}
                         </div>
                     </div>
                 </div>

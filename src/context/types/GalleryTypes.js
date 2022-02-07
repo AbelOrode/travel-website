@@ -1,0 +1,1 @@
+export const OPEN_LIGHTBOX = 'OPEN_LIGHTBOX';

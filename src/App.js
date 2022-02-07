@@ -12,6 +12,7 @@ import {HelmetProvider} from 'react-helmet-async';
 import DestinationsProvider from './context/providers/DestinationsProvider';
 import ServicesProvider from './context/providers/ServicesProvider';
 import ReviewsProvider from './context/providers/ReviewsProvider';
+import GalleryProvider from './context/providers/GalleryProvider';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
     <Router>
        <ModalProvider>
          <NavProvider>
+           <GalleryProvider>
            <Toggle/>
           <Nav/>
             <DestinationsProvider>
@@ -38,6 +40,7 @@ function App() {
               </ReviewsProvider>
               </ServicesProvider>
             </DestinationsProvider>
+            </GalleryProvider>
          </NavProvider>
        </ModalProvider>
     </Router>

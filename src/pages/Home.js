@@ -10,7 +10,7 @@ import Destinations from '../components/Destinations';
 import Services from '../components/services/Services';
 import Reviews from '../components/reviews/Reviews'
 import ReviewsContext from '../context/ReviewsContext';
-
+import GalleryComponent from '../components/gallery/GalleryComponent';
 const Home = () => {
 
     
@@ -49,12 +49,10 @@ const Home = () => {
             <Modal current = {loginModal}>
                 <Login currentModal = {registerModal}/>
             </Modal>
-
             <Destinations/>
-
             <Services/>
-
             <Reviews/>
+            <GalleryComponent/>
            
         </div>
     )
