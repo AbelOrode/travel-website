@@ -11,6 +11,7 @@ import Services from '../components/services/Services';
 import Reviews from '../components/reviews/Reviews'
 import ReviewsContext from '../context/ReviewsContext';
 import GalleryComponent from '../components/gallery/GalleryComponent';
+import Footer from '../components/footer/Footer';
 const Home = () => {
 
     
@@ -53,7 +54,7 @@ const Home = () => {
             <Services/>
             <Reviews/>
             <GalleryComponent/>
-           
+            <Footer/>
         </div>
     )
 

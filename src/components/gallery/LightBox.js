@@ -4,7 +4,7 @@ import GalleryContext from "../../context/GalleryContext";
 
 const LightBox = () => {
     const {galleryStore : {currentLightBox}, } = useContext(GalleryContext);
-    
+
     return(
         
         <div className="gallery__lightbox">
@@ -17,7 +17,6 @@ const LightBox = () => {
         </div>
    
     )
-
 }
 
 export default LightBox;

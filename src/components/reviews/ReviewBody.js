@@ -7,9 +7,9 @@ const ReviewBody = ({review}) => {
         let container = [];
         for(let i = 1; i <= 5; i++){
             if(i <= number){
-                container.push(<BsFillStarFill size={13} color="df2189" className="reviews__body__contents__info__rating__icon" />)
+                container.push(<BsFillStarFill key={i} size={13} color="df2189" className="reviews__body__contents__info__rating__icon" />)
             }else{
-                container.push(<BsStar size={13} color="df2189" className="reviews__body__contents__info__rating__icon" />)
+                container.push(<BsStar key={i} size={13} color="df2189" className="reviews__body__contents__info__rating__icon" />)
             }
         }
 
