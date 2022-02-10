@@ -13,6 +13,8 @@ import DestinationsProvider from './context/providers/DestinationsProvider';
 import ServicesProvider from './context/providers/ServicesProvider';
 import ReviewsProvider from './context/providers/ReviewsProvider';
 import GalleryProvider from './context/providers/GalleryProvider';
+import Contact from './pages/Contact';
+import AnimationsProvider from './context/providers/AnimationsProvider';
 
 function App() {
 
@@ -26,7 +28,8 @@ function App() {
            <GalleryProvider>
            <Toggle/>
           <Nav/>
-            <DestinationsProvider>
+          <AnimationsProvider>
+            <DestinationsProvider>             
               <ServicesProvider>
                 <ReviewsProvider>
                 <HelmetProvider>
@@ -34,12 +37,14 @@ function App() {
                       <Route path ='/' exact element = {<Home/>}/>
                       <Route path = '/about' exact element = {<About/>}/>  
                       <Route path ='/details/:id' exact element={<Details/>}/>
-                      <Route component = {NotFound} />     
+                      <Route path ='/contact' exact element={<Contact/>}/>
+                      <Route path='*' element = {<NotFound/>}/>     
                     </Routes>
                 </HelmetProvider>
               </ReviewsProvider>
               </ServicesProvider>
             </DestinationsProvider>
+            </AnimationsProvider>
             </GalleryProvider>
          </NavProvider>
        </ModalProvider>

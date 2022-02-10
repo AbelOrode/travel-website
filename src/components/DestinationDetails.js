@@ -4,8 +4,8 @@ const DestinationDetails = ({title, text}) => {
 
         <div>
             <div className="destinationInfo__details">
-                <div className="destinationInfo__details__head">{title}</div>
-                <div className="destinationInfo__details__text">{text}</div>
+                <div className="destinationInfo__details__head animation">{title}</div>
+                <div className="destinationInfo__details__text animation">{text}</div>
             </div>
         </div>
 

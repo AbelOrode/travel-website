@@ -14,7 +14,7 @@ const GalleryComponent = () => {
 
             <div className='gallery'>
             <div className='container'>
-                <h2 className='heading mb-5'>{heading}</h2>
+                <h2 className='heading mb-5 heading-animation'>{heading}</h2>
                 <div className='row'>
                     {gallery.length > 0 ? gallery.map((glr, index) => (
                         <GalleryImage key={index} glr={glr} />

@@ -3,6 +3,9 @@
 .destinations{
     margin: 7rem 0;
 
+    @include responsive(xsmall){
+        margin: 4rem 0;
+    }
     &__heading{    
         font-size: 2.8rem;
         color: $color__black;
@@ -10,6 +13,14 @@
         line-height: 4rem;
         position: relative;
         font-variant: small-caps;
+        @include responsive(large){
+            width: 100%;
+        }
+        @include responsive(xsmall){
+            font-size: 2.1rem;
+            line-height: 3.5rem;
+            text-transform: capitalize;
+        }
 
         &::after{
 
@@ -20,6 +31,9 @@
             width: 40%;
             height: .2rem;
             background: $main1;
+            @include responsive(large){
+                width: 50%;
+            }
         
         }
     }
@@ -34,6 +48,9 @@
 
     &__block{
         margin-top: 4rem;
+        @include responsive(xsmall){
+            margin-top: 3rem;
+        }
     }
 
     &__card{

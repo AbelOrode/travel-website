@@ -34,7 +34,7 @@ const registerForm = (e) => {
                 <div className="group">
                     <input type="password" name="" className="group__control" placeholder = "Create Password" onChange={(e) => setState({...state, password: e.target.value})} value={state.password}/>
                 </div>
-                <div className="group flex space-between y-center">
+                <div className="group modal__row">
                     <input type= "submit" name="" className="btn-dark" value="Register"/>
                     <span onClick={() => dispatch({type: OPEN_MODAL, payload: props.currentModal})}>Already have an account?</span>
                 </div>

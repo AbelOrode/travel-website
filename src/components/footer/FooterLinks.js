@@ -34,15 +34,15 @@ const FooterLinks = () => {
         <div>
             <div className='row'>
                 <div className='col-4 p-15'>
-                    <h3 className='footer__heading'>{headings.pages.toUpperCase()}</h3>
+                    <h3 className='footer__heading heading-animation'>{headings.pages.toUpperCase()}</h3>
                     <ShowFooterLinks links = {pages}/>
                 </div>
                 <div className='col-4 p-15'>
-                    <h3 className='footer__heading'>{headings.partners.toUpperCase()}</h3>
+                    <h3 className='footer__heading heading-animation'>{headings.partners.toUpperCase()}</h3>
                     <ShowFooterLinks links = {partners} external = {true} />
                 </div>
                 <div className='col-4 p-15'>
-                    <h3 className='footer__heading'>{headings.destinations.toLocaleUpperCase()}</h3>
+                    <h3 className='footer__heading heading-animation'>{headings.destinations.toUpperCase()}</h3>
                     <ShowFooterLinks links = {destinations}/>
                 </div>
             </div>

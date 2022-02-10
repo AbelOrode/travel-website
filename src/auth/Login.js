@@ -27,7 +27,7 @@ const Login = (props) => {
             <div className="group">
                 <input type="password" name="" className="group__control" placeholder = "Enter Password" onChange={(e) => setState({...state, password: e.target.value})} value={state.password}/>
             </div>
-            <div className="group flex space-between y-center">
+            <div className="group modal__row">
                 <input type= "submit" name="" className="btn-dark" value="Login"/>
                 <span onClick={() => dispatch({type: OPEN_MODAL, payload: props.currentModal})}>Create new account?</span>
             </div>
